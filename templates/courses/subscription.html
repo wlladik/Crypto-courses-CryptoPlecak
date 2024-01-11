@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="form-section container">
+       {% if  user.is_authenticated == False or user.profile.acc_type == 'free' %}
+           <h1>Buy subscription to have access to the courses.</h1>
+           <p>You will have access to the all courses on our platform.</p>
+           <a href="{{ url }}"><button>Buy subscription - 44$</button></a>
+       {% else %}
+            <h1>You have access to all of these courses, enjoy!</h1>
+       {% endif %}
+    </div>
+    {% include 'courses/courses_partial.html' %}
+{% endblock %}

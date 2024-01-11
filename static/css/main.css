@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;800&family=Silkscreen:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background: rgb(110, 110, 187); */
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(108,31,156,1) 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: color 500ms ease;
+}
+
+a:hover{
+    color: sandybrown;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; 
+}
+
+header .logo{
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+header nav a{
+    margin-left: 15px;
+}
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    /* margin-bottom: 10px; */
+}
+
+.home-page h1,
+.home-page h2{
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.home-page img{
+    width: 40%;
+    transition: transform 500ms;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.home-page img:hover{
+    transform: scale(1.1);
+}
+
+.home-page .block-txt {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    width: 50%;
+    background: rgb(87, 87, 153);
+    border-radius: 5px;
+    padding: 30px; /* Додайте padding сюди, якщо потрібно внутрішні відступи */
+    margin: 0 auto;
+}
+
+.home-page .block-txt p {
+    max-width: 100%; /* Змінив max-width для p елементу */
+    margin: 0; /* Знімаємо зовнішні відступи, які можуть додавати браузери за замовчуванням */
+}
+
+.home-page .arrow{
+    color: #fafafa;
+    font-size: 45px;
+    transition: transform 0.9s ease;
+}
+
+.home-page .arrow:hover{
+    transform: translate(0px, 10px);
+}
+
+.courses{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.aside{width: 780px;}
+.aside p{margin: 20px 0;}
+
+.courses .course{
+    background: rgb(87, 87, 153);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 30%;
+    color: #fff;
+    border-radius: 5%;
+}
+
+.courses .course img{
+    width: 100%;
+}
+
+.courses .course h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.courses .course a{
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background: #4e4380;
+    color: #fff;
+    transition: transform 500ms ease;
+}
+
+.courses .course a:hover{
+    transform: scale(1.1);
+}
+
+.form-section {
+    margin-top: 20px;
+    box-sizing: border-box;
+    /* background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    background: rgb(87, 87, 153);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0px 2px 4px 0px rgb(5 5 5 / 5%);
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+form .helptext {
+    font-size: 13px;
+    display: block;
+    color: #5e5e5e;
+}
+
+form input {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    width: 300px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.form-section button {
+    margin-top:20px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 0;
+    background: #342645;
+    color: #fff;
+    transition: transform 500ms ease;
+    cursor: pointer;
+    width: 230px;
+}
+
+.form-section button:hover {transform: scale(1.1);}
+hr {margin: 10px 0;}
+
+footer{
+    display: flex;
+    margin-top: auto;
+}
+
+.site-footer {
+    border-top: 2px solid #001610;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

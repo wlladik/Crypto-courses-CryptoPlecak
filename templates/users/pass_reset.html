@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Password reset
+{% endblock %}
+
+{% block main %}
+    <h1>Password reset</h1>
+    <form method="post" class="form-section container">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-danger mb-2" type="submit">Get a new password</button>
+    </form>
+{% endblock %}
+
+

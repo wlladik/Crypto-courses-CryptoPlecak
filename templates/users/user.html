@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Autorization page
+{% endblock %}
+
+{% block main %}
+    <div class="form-section container">
+        <h1>Autorization page</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-warning mb-2" type="submit">Sign In</button>
+            <hr>
+            <p>Forgot your password? <a href="{% url 'pass-reset' %}">Get new</a></p>
+        </form>
+        <hr>
+        <p>Don't have an accout? <a href="{% url 'reg' %}">Sign Up</a></p>
+    </div>
+{% endblock %}

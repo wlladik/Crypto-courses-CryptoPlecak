@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="courses container">
+        <div class="course">
+            {% if object.image %}
+                <img src="{{ object.image.url }}" alt="{{ object.title }}">
+            {% else %}
+                <img src="/pictures/default.png" alt="{{ object.title }}">
+            {% endif %}
+            <h3>{{ object.title }}</h3>
+        </div>
+        <aside class="aside">
+            <h1>Lesson: {{ lesson.title }}</h1>
+
+            {% if object.free == True or user.profile.acc_type == 'full' %}
+                <p>{{ lesson.desc }}</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{lesson.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            {% else %}
+                <p>You need to buy <a href="{% url 'subscription' %}">subscription!</a></p>
+            {% endif %}
+        </aside>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="courses container">
+        <div class="course">
+            {% if object.image %}
+                <img src="{{ object.image.url }}" alt="{{ object.title }}">
+            {% else %}
+                <img src="/pictures/default.png" alt="{{ object.title }}">
+            {% endif %}
+            <h3>{{ object.title }}</h3>
+        </div>
+        <aside class="aside">
+            <h1>About course</h1>
+            <p>{{ object.desc }}</p>
+
+            {% if object.free == False and user.is_authenticated == False %}
+                <p>Don't have an accout? <a href="{% url 'reg' %}">Sign Up</a></p>
+                <p>Alredy have an accout? <a href="{% url 'user' %}">Sign In</a></p>
+            {% else %}
+                {% if object.free == True or user.profile.acc_type == 'full' %}
+                    <ul>
+                        {% for el in lessons %}
+                            <li><a href="{{ el.get_absolute_url }}">{{el.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>You need to buy <a href="{% url 'subscription' %}">subscription!</a></p>
+                {% endif %}
+            {% endif %}
+        </aside>
+    </div>
+{% endblock %}
